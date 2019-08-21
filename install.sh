@@ -39,9 +39,9 @@ cat > $java <<-'EOF'
 	fi
 
 	dir="$(dirname "$(realpath "${1}.dex")")"
-	name="$(basename "$1")"
+	name="$(basename "$1")"; shift
 
-	dalvikvm -cp "${dir}/${name}.dex" "${name}" || {
+	dalvikvm -cp "${dir}/${name}.dex" "${name}" "$@" || {
 	  echo "Unable to run java package"; exit
 	}
 EOF
