@@ -4,7 +4,7 @@ Because the JDK is too big to install in termux.
 So it has another way to run Java program in termux---ecj.  
 This script can automatically install ecj, dx and termux-tools in termux to run Java program.  
 
-## Install
+## Installation
 
 ```bash
 pkg i git ecj dx -y
@@ -28,3 +28,5 @@ java ./Test/HelloWorld
 ```
 
 **Note:-** `javac` produces _dex_ file which is finally executed by Dalvik Virtual Machine that comes with all android devices.
+
+### See [wiki](https://github.com/HemanthJabalpuri/run_java/wiki/Different-ways) for more info.
